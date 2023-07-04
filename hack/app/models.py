@@ -39,6 +39,7 @@ class Attendence(models.Model):
 
     
 class Review(models.Model):
+    room=models.ForeignKey(Room,on_delete=models.CASCADE,default=None)
     review_no=models.IntegerField(default=0)
     session = models.ForeignKey(Session,on_delete=models.CASCADE)
     review_marks = models.IntegerField(default=0)
